@@ -14,6 +14,8 @@
             <th scope="col">Id</th>
             <th scope="col">Film name</th>
             <th scope="col">Data</th>
+            <th>Update</th>
+            <th>Delete</th>
         </thead>
         <tbody>
             <% info.forEach(function(justOne) { %>
@@ -21,8 +23,8 @@
             <td><strong><%= justOne._id %></strong></td>
             <td><strong><%= justOne.name %></strong></td>
             <td><strong><%= justOne.data %></strong></td>
-            <td><a class="update" href="update?id=<%= justOne._id %>">Update</a></td>
-            <td><a class="delete" href="delete?id=<%= justOne._id %>">Delete</a></td>
+            <td><a class="update" href="/update/<%= justOne._id %>">Update</a></td>
+            <td><a class="delete" href="/delete/<%= justOne._id %>">Delete</a></td>
           </tr>
           <% }); %>
         </tbody>
